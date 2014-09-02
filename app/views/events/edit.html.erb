@@ -1,0 +1,17 @@
+<h4>Edit Event</h4>
+<%= form_for :event, method: :patch do |z| %>
+	<p>
+		<ul>
+		<li><%= z.label :ScheduleGroup %><%= z.text_field :ScheduleGroup %></li>
+		<li><%= z.label :Person %><%= z.text_field :Person %></li>
+		<li><%= z.label :EventType, "Type of Event" %><%= z.text_field :EventType %></li>
+		<li><%= z.label :EventDate, "Event Date" %><%= z.date_select :EventDate, :default => @event.EventDate %></li>
+		<li><%= z.label :EventTime, "Event Time" %><%= z.time_select(:EventTime, ignore_date: false, ampm: true, minute_step: 15, include_blank: true) %></li>
+		<li><%= z.label :Description, "Description" %><%= z.text_field :Description, "size" => 150 %></li>
+		<li><%= z.label :City, "City" %><%= z.text_field :City %></li>
+		<li><%= z.label :State, "State" %><%= z.text_field :State %></li>
+		<li><%= z.label :CiteLink, "Citation" %><%= z.text_field :CiteLink %></li>
+		<li><%= z.submit %></li>
+		</ul>
+	</p>
+<% end %>

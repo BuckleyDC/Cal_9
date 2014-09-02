@@ -1,0 +1,28 @@
+<p>
+  <strong>Schedule Group Name:</strong>
+  <%= @event.ScheduleGroup %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @event.Person %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @event.EventDate %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <% if @event.EventTime.to_s[11] == "0" %>
+  <%= @event.EventTime.to_s[12..18]%>
+  <% else %>
+  <%= @event.EventTime.to_s[11..18]%>
+  <% end %>
+</p>
+
+<p>
+  <strong>Time Full:</strong>
+  <%= @event.EventTime %>
+</p>
