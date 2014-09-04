@@ -1,7 +1,15 @@
 Date Search
 <%= form_tag "/events/search", method: "GET" do %>
-<%= date_field_tag :q, params[:q] %>
-<%= date_field_tag :p, params[:p] %>
+<%= label_tag(:q, "Start Date") %>
+<%= date_field_tag :q, params[:q] %><br>
+<%= label_tag(:q, "End Date") %>
+<%= date_field_tag :p, params[:p] %><br>
+<%= radio_button_tag(:candidate, "Marco Rubio") %>
+<%= label_tag(:candidate, "Marco Rubio")%>
+<%= radio_button_tag(:candidate, "Chris Christie") %>
+<%= label_tag(:candidate, "Chris Christie")%>
+<%= radio_button_tag(:candidate, "Ted Cruz") %>
+<%= label_tag(:candidate, "Ted Cruz")%>
 <%= submit_tag "Search", :name => nil %>
 <% end %> 
 
