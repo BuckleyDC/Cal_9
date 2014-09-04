@@ -5,7 +5,7 @@ class EventsController < ApplicationController
 	end
 
 	def search
-		@events = Event.search_for(params[:q])
+		@events = Event.where("EventDate BETWEEN ? AND ?", params[:q], params[:p])
 	end
 
 	def new

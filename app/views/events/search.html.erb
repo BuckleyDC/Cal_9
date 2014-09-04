@@ -1,6 +1,7 @@
 Date Search
 <%= form_tag "/events/search", method: "GET" do %>
 <%= date_field_tag :q, params[:q] %>
+<%= date_field_tag :p, params[:p] %>
 <%= submit_tag "Search", :name => nil %>
 <% end %> 
 
