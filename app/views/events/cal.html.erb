@@ -1,0 +1,27 @@
+<!-- 
+
+search needs to find:
+	- (events created since last update) AND (events from today until the last date in the calendar) (NOT events added since last update that happened before now)
+	- events that are in-house vs. public
+
+	- make variable in controller for holding "last updated" information. 
+
+-->
+
+<%= form_tag "/events/cal", method: "GET" do %>
+<%= submit_tag "Search", :name => nil %>
+<% end %>
+
+<% @events.each do |event| %>
+		<tr>
+			<td><%= event.ScheduleGroup %></td>
+			<td><%= event.Person %></td>
+			<td><%= event.EventType %></td>
+			<td><%= event.EventDate %></td>
+			<td><%= event.EventTime %></td>
+			<td><%= event.Description %></td>
+			<td><%= link_to 'Show', event_path(event) %></td>
+			<td><%= link_to 'Edit', edit_event_path(event) %></td>
+      		<td><%= link_to 'Delete', event_path(event), method: :delete %></td>
+		</tr>
+	  <% end %>

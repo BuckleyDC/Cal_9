@@ -5,7 +5,12 @@ class EventsController < ApplicationController
 	end
 
 	def search
-		@events = Event.where("(EventDate BETWEEN ? AND ?) AND ((Person LIKE ?) OR (Description LIKE ?))", params[:q], params[:p], params[:candidate], params[:candidate])
+		@events = Event.where("(EventDate BETWEEN ? AND ?) AND ((Person LIKE ?) 
+			OR (Description LIKE ?))", params[:q], params[:p], params[:candidate], params[:candidate])
+	end
+
+	def cal
+		@events = Event.where(":created_at > ? AND EventDate > ?", ) 
 	end
 
 	def new

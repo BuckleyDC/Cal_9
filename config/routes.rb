@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  get 'events/cal' => 'events#cal'
   get 'events/search' => 'events#search'
-
   resources :events
 
   # The priority is based upon order of creation: first created -> highest priority.
