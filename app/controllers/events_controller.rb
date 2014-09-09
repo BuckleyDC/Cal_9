@@ -10,7 +10,8 @@ class EventsController < ApplicationController
 	end
 
 	def cal
-		@events = Event.where(":created_at > ? AND EventDate > ?", ) 
+		@last_update = 
+		@events = Event.where(":created_at > ? AND EventDate < '2016-11-08', :last_update", ) 
 	end
 
 	def new

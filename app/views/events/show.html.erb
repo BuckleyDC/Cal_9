@@ -1,25 +1,19 @@
 <p>
-  <strong>Schedule Group Name:</strong>
-  <%= @event.ScheduleGroup %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @event.Person %>
-</p>
-
-<p>
+  <strong>Schedule Group:</strong>
+  <%= @event.ScheduleGroup %><br>
+  <strong>Candidate:</strong>
+  <%= @event.Person %><br>
   <strong>Date:</strong>
-  <%= @event.EventDate %>
-</p>
-
-<p>
+  <%= @event.EventDate %><br>
   <strong>Time:</strong>
   <% if @event.EventTime.to_s[11] == "0" %>
   <%= @event.EventTime.to_s[12..18]%>
   <% else %>
   <%= @event.EventTime.to_s[11..18]%>
   <% end %>
+  <strong>Description:</strong>
+  <%= @event.EventDate %><br>
+  <% link_to 'Home', events_path %>
 </p>
 
 <!-- 

@@ -13,6 +13,7 @@ search needs to find:
 <% end %>
 
 <% @events.each do |event| %>
+<table>
 		<tr>
 			<td><%= event.ScheduleGroup %></td>
 			<td><%= event.Person %></td>
@@ -25,3 +26,4 @@ search needs to find:
       		<td><%= link_to 'Delete', event_path(event), method: :delete %></td>
 		</tr>
 	  <% end %>
+</table>
