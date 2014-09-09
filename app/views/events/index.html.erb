@@ -2,29 +2,5 @@ Events
 
 <h3><%= link_to "Create New Event", new_event_path %></h3>
 <h3><%= link_to "Search by Date", events_search_path %></h3>
-
-	<table>
-		<tr>
-			<th>Schedule Group</th>
-			<th>Person</th>
-			<th>Event Type</th>
-			<th>Event Date</th>
-			<th>Event Time</th>
-			<th>Description</th>
-		</tr>
-
-	<% @events.each do |event| %>
-		<tr>
-			<td><%= event.ScheduleGroup %></td>
-			<td><%= event.Person %></td>
-			<td><%= event.EventType %></td>
-			<td><%= event.EventDate %></td>
-			<td><%= event.EventTime %></td>
-			<td><%= event.Description %></td>
-			<td><%= link_to 'Show', event_path(event) %></td>
-			<td><%= link_to 'Edit', edit_event_path(event) %></td>
-      		<td><%= link_to 'Delete', event_path(event), method: :delete %></td>
-		</tr>
-	  <% end %>
-	  <%= will_paginate @events %> 
-	</table>
+<%= will_paginate @events %>
+<%= render 'display' %>

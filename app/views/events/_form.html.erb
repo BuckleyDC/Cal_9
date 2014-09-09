@@ -3,7 +3,7 @@
 		<ul>
 			<li><%= z.label :ScheduleGroup, "Schedule Group" %><%= z.select :ScheduleGroup, ['GOP Events', 'Other'] %></li>
 			<li><%= z.label :Person %><%= z.select :Person, ['', 'Marco Rubio', 'Chris Christie', 'Scott Walker', 'Rick Perry', 'Ted Cruz', 'Jeb Bush', 'Bobby Jindal', 'Rand Paul', 'Paul Ryan'] %>
-			<%= z.label :Person, "Other:" %><%= z.text_field :Person %></li>
+			<%= label_tag :Other_Person, "Other:" %><%= text_field_tag :Other_Person %></li>
 			<li><%= z.label :EventType, "Type of Event" %><%= z.text_field :EventType %></li>
 			<li><%= z.label :EventDate, "Event Date" %><%= z.date_field :EventDate %>
 			<li><%= z.label :EventTime, "Event Time" %><%= z.time_select(:EventTime, ignore_date: false, ampm: true, minute_step: 15, include_blank: true) %></li>

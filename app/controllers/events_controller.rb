@@ -20,7 +20,7 @@ class EventsController < ApplicationController
 
 	def create
 		@event = Event.new(event_params)
-
+# enter if/then statement to deal with Other_Person
 		@event.save
 		redirect_to @event
 	end
